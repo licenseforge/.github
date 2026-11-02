@@ -1,0 +1,42 @@
+name: Bug report
+description: Something isn't working as expected
+labels: [bug, triage]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: LicenseForge server / SDK version
+    validations:
+      required: true
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      options: [Server, Dashboard, CLI, Agent, Go SDK, Java SDK, TypeScript SDK, Helm chart, Other]
+    validations:
+      required: true
+  - type: textarea
+    id: env
+    attributes:
+      label: Environment
+      description: Kubernetes version, cloud/on-prem, air-gapped or not, IdP
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Remove license keys, tokens and personal data first.
+      render: shell
